@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SMDS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: rgb(102, 62, 148);
+  color: black;
+}
+
+/* Style the content */
+.content {
+  background-color: rgb(151, 68, 68);
+  padding: 10px;
+  height: 200px; /* Should be removed. Only for demonstration */
+}
+h2
+{
+   color: rgb(234, 226, 241);
+   text-align: center;
+   font-size: 50pt;
+}
+/* Style the footer */
+.footer {
+  background-color: #5942df;
+  padding: 10px;
+}
+</style>
+
+</head>
+<body>
+    
+<div class="topnav">
+   
+  <a href="home.html">Home</a>
+
+  
+</div>
+
+<div class="content">
+    <img src="img/logo.png" style="margin-left: 300px;margin-right:auto;height:88px;width:220px"/> 
+     
+  <h2>Smart Malaria Detection Device</h2>
+
+
+  <h1 id="login-header">Login</h1>
+    
+  
+  
+  <form id="login-form">
+    <input type="text" name="username" id="username-field" class="login-form-field" placeholder="Username">
+    <input type="password" name="password" id="password-field" class="login-form-field" placeholder="Password">
+    <input type="submit" value="Login" id="login-form-submit" class="submit-btm" onclick="auth(event)" >
+  </form>
+</div>
+<script>
+  function auth(event)
+  {
+    event.preventDefault();
+    var uid=document.getElementById("username-field").value;
+    var pwd=document.getElementById("password-field").value;
+
+    if(uid=="admin" && pwd=="admin")
+    {
+      window.location.replace("./index.html");
+      alert("Login Successful");
+    }
+    else{
+      alert("Invalid Credentials");
+      return;
+    }
+  }
+</script>
+<div class="footer">
+  <p></p>
+</div>
+
+</body>
+</html>
+
+

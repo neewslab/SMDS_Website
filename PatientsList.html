@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Patients</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style tab links */
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+.tablink:hover {
+  background-color: #777;
+}
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent {
+  color: white;
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: rgb(102, 62, 148);
+  color: black;
+}
+
+/* Style the content */
+.content {
+  background-color: rgb(151, 68, 68);
+  padding: 10px;
+  height: 200px; /* Should be removed. Only for demonstration */
+}
+h2
+{
+   color: rgb(234, 226, 241);
+   text-align: center;
+   font-size: 50pt;
+}
+/* Style the footer */
+.footer {
+  background-color: #5942df;
+  padding: 10px;
+}
+p {
+  font-size: 24px;
+  text-align: center;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.button1 {
+  align-self: center;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+}
+
+.button1:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.button2:hover {
+  background-color: #008CBA;
+  color: white;
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+
+    
+<div class="topnav">
+   
+  <a href="home.html">Home</a>
+  <a href="PatientPortal.html">Patients</a>
+  <a href="index.html">Diagonastics</a>
+</div>
+</head>
+<body>
+<div class="content">
+    <img src="img/logo.png" style="margin-left: 300px;margin-right:auto;height:88px;width:220px"/> 
+     
+  <h2>Smart Malaria Detection Device</h2>
+  <p >Patient Portal</p>
+ 
+
+ 
+  <ion-item class="item-remove-animate" ng-repeat="y in yoshi">
+    <div class="item-text-wrap">Name: {{y.key.substr(0,y.key.charat(' '))}} </div>
+    <div class="item-text-wrap">Data: {{y.val}}</div>
+</ion-item>
+
+
+</body>
+</html>
+
+
+
+
+
