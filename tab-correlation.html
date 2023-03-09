@@ -1,0 +1,17 @@
+<ion-view view-title="Download Data from Cloud">
+	<ion-content class="padding">
+	  <!--<form action='https://yoshi-8c738.firebaseio.com/Android/data/Pulse_2.json' method="get" style="font-family:Arial">-->
+	  <form method="get" style="font-family:Arial">
+		<div style="text-align:center">
+		  <label for="no_of_records" style="font-weight:bold;font-size:16px">Please enter below no. of latest records to be downloaded:</label>
+	  <input type="number" id="no_of_records" name="limitToLast" value="25" style="margin-left:42.5%;width:15%;text-align:center;font-size:16px;background-color:#4444" /> 
+		</div>
+		<p>
+		<div style="text-align:center">
+			<button type="button" onclick='var limit2last = getElementById("no_of_records").value; var xmlHttp = new XMLHttpRequest(); xmlHttp.open("GET", "https://neews-sensing-android.firebaseio.com/SMDS1.json?orderBy=\"$key\"&limitToLast="+limit2last, false); xmlHttp.send( null ); response_data = xmlHttp.responseText; response_data = response_data.replace("{", ""); response_data = response_data.replace("}", ""); all_data_rows = response_data.split("\","); var data_for_file = "Timestamp,DataID,SensorData\n"; var i; m_max = all_data_rows.length; for (m=0; m < m_max; m++) {curr_data_row = all_data_rows[m]; [curr_row_key, curr_row_val] = curr_data_row.split("\":\""); curr_row_key = curr_row_key.replace("\"", ""); curr_row_val = curr_row_val.replace("\"", ""); write("Timestamp: " + curr_row_key.replace("\"", "") + " Data: " + curr_row_val.replace("\"", "")); write("<br>"); data_for_file = data_for_file + curr_row_key + "," + curr_row_val + "\n";}; write("<br>"); write("Refresh current page to return to download form"); var element = document.createElement("a"); element.setAttribute("href", "data:text/csv;charset=utf-8," + encodeURIComponent(data_for_file)); element.setAttribute("download", "sensor_data_from_firebase.txt"); element.style.display = "none"; document.body.appendChild(element); element.click(); document.body.removeChild(element); ' style="font-size:16px">Download Data Records</button>
+		</div>
+		</p>
+	  </form>
+	</ion-content>
+  </ion-view>
+  
